@@ -540,6 +540,17 @@ footer span{color:#ffffff;font-weight:600;}
   body::after{animation:none;opacity:.6;}
   .float-wa{animation:none;}
 }
+
+  <style>
+  .imagen-protegida {
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+</style>
+
+  
+  
 </style>
 </head>
 <body>
@@ -851,6 +862,18 @@ footer span{color:#ffffff;font-weight:600;}
   </div>
 </section>
 
+<script>
+  window.addEventListener("load", function() {
+    const imagenes = document.querySelectorAll(".imagen-protegida");
+    imagenes.forEach(img => {
+      img.addEventListener("contextmenu", e => e.preventDefault());
+      img.addEventListener("dragstart", e => e.preventDefault());
+    });
+  });
+</script>
+
+
+  
 <footer>
   <p>© 2026 <span>Consultor </span> · Consultora Independiente Immunotec · ¡Tu Salud Es Primero! 2026<br>
   Este sitio es gestionado por Consultor  como distribuidora independiente. Los testimonios son experiencias individuales. Immunocal no reemplaza tratamientos médicos.</p>
